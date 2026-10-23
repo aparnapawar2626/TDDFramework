@@ -25,10 +25,11 @@ test('valid login in saucelabs_test', async ({ page }) => {
     await page.locator("//div[contains(text(),'Sauce Labs Backpack')]").click();
     await expect(page.locator("#add-to-cart")).toBeVisible();
     await page.locator("#add-to-cart").click();
+  // await page.locator("#add-to-cart").click();
     await expect(page.locator("//div[@class='shopping_cart_container']")).toBeVisible();
     await page.locator("//div[@class='shopping_cart_container']").click();
     
-   //await page.waitForTimeout(2000);
+   await page.waitForTimeout(2000);
    await expect(page.locator("#inventory_item_name")).toBeVisible();
    await expect(page.locator("#inventory_item_name")).toContainText('Sauce Labs Backpack');
     await expect(page.locator("#inventory_item_price")).toContainText('$29.99');    
