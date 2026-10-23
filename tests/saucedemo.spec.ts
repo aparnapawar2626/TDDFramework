@@ -40,7 +40,7 @@ test('valid login in saucelabs', async ({ page }) => {
     await page.waitForTimeout(2000);
 
     await page.locator("#generate-pdf-order").click();
-    await page.waitForTimeout("2000");
+    //await page.waitForTimeout("2000");
   
 });
 
